@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: auto;
+            border-radius: 5%;
+            border-collapse: collapse;
+        }
+        thead{
+            background-color: bisque;
+            text-align: start;
+            font-size: 22px;
+            
+        }
+     tbody{
+         font-size: 20px;
+         background-color: aquamarine;
+         text-align: right;
+         border-radius: 5%;
+     }
+        th,td{
+            border: 2px solid black;
+            height: 40px;
+            width: 100px;
+            border-radius: 5%;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Geo</td>
+            <td>Eng</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
+<script>
+
+    var obj = [
+              {name: "Nrupul", science: 100, maths: 60,geo: 65, eng: 67},
+              {name: "Yogesh", science: 100, maths: 50,geo: 54, eng: 54},
+              {name: "Prateek", science: 60, maths: 50,geo: 76, eng: 56},
+              {name: "Chandra", science: 80, maths: 70,geo: 67, eng: 70},
+              {name: "Ankush", science: 80, maths: 60, geo: 69, eng: 65},
+              {name: "Varun", science: 70, maths: 55, geo: 60, eng: 54},
+              {name: "Arjun", science: 100, maths: 60, geo: 56, eng: 54},
+       ];
+    
+    obj.map(function (elem) {
+
+        var row = document.createElement("tr");
+        var col1 = document.createElement("td");
+        col1.innerText = elem.name;
+        var col2 = document.createElement("td");
+        col2.innerText = elem.science;
+        var col3 = document.createElement("td");
+        col3.innerText = elem.maths;
+        var col4 = document.createElement("td");
+        col4.innerText = elem.geo;
+        var col5 = document.createElement("td");
+        col5.innerText = elem.eng;
+
+
+        row.append(col1, col2, col3, col4, col5);
+         
+        document.querySelector("tbody").append(row);  
+    });
+</script>
